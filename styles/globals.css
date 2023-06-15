@@ -9,3 +9,13 @@
     @apply bg-whiteBg font-sans text-blackBg text-base font-normal;
   }
 }
+
+@layer components {
+
+  /*Hero section  */
+  .herobg{
+    background-color: aqua;
+  }
+
+  /*Hero section  */
+}
