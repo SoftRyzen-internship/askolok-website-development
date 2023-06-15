@@ -2,6 +2,7 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { XMarkIcon, Bars3BottomLeftIcon } from '@heroicons/react/24/outline';
 import { useEffect, useState } from 'react';
 import { Link, scroller } from 'react-scroll';
+import css from './Header.module.css';
 
 // import Image from 'next/image';
 import CompanyLogo from '../../components/Logo/Logo';
@@ -56,7 +57,7 @@ function Header() {
                           }}
                         >
                           <Link
-                            activeClass="active"
+                            activeClass={css.active}
                             tabIndex={0}
                             to={item.href}
                             spy={true}
@@ -64,9 +65,7 @@ function Header() {
                             duration={500}
                             key={item.id}
                             onSetActive={handleSetActive}
-                            className={`${
-                              activeLink === item.name ? 'font-semibold underline' : ''
-                            } cursor-pointer py-2 text-blackBg`}
+                            className={`cursor-pointer py-2 text-blackBg`}
                           >
                             {item.name}
                           </Link>

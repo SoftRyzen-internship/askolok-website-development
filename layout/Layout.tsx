@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Toaster } from 'react-hot-toast';
-import Policy from ""
+import Policy from "../page-components/Section/Section"
 
 import { ILayout } from './Layout.props';
 import Header from '@/page-components/Header/Header';

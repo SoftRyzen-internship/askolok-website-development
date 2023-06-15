@@ -1,0 +1,8 @@
+.active {
+  font-weight: 600;
+  text-decoration-line: underline;
+}
+
+/* ${
+  activeLink === item.href ? 'font-semibold underline' : ''
+} */
