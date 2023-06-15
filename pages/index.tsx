@@ -1,3 +1,5 @@
+import Layout from '@/components/layout/Layout';
+
 export default function Home() {
-  return <main className={`container `}>Hello</main>;
+  return <Layout>Hello</Layout>;
 }
