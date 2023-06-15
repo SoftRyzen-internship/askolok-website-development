@@ -33,6 +33,8 @@ module.exports = {
         blueBg: '#F0F4FF',
         blackBg: '#252525',
         borderPrimary: '#CCCCCC',
+        blueDark: '#1729B2',
+        blueLight: '#4475EB',
       },
     },
   },
