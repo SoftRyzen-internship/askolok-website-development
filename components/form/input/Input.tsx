@@ -1,14 +1,6 @@
 import { FC } from 'react';
-import { UseFormRegisterReturn } from 'react-hook-form';
 
-interface IInputProps {
-  errorMessage?: string;
-  register: UseFormRegisterReturn;
-  placeholder?: string;
-  type?: string;
-  children?: React.ReactNode;
-  label?: string;
-}
+import { IInputProps } from './Input.props';
 
 const Input: FC<IInputProps> = ({ register, errorMessage, placeholder, type, children, label }) => {
   return (
