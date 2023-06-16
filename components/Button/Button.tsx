@@ -1,12 +1,6 @@
 import { FC } from 'react';
 
-interface IButtonProps {
-  content: string;
-  type?: 'button' | 'submit';
-  color?: 'black' | 'white' | 'gradient';
-  rounded?: boolean;
-  className?: string;
-}
+import { IButtonProps } from './types';
 
 const Button: FC<IButtonProps> = ({
   content,
