@@ -28,6 +28,12 @@ module.exports = {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },
+      backgroundImage: {
+        blueBgGradient: 'linear-gradient(130.88deg, #1729B2 4.35%, #4475EB 96.44%)',
+      },
+      boxShadow: {
+        primaryShadow: ' 0px 2px 20px rgba(37, 37, 37, 0.15)',
+      },
       colors: {
         whiteBg: '#FFFFFF',
         blueBg: '#F0F4FF',
