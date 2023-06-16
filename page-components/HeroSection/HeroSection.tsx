@@ -4,7 +4,7 @@ import { FC } from 'react';
 const HeroSection: FC = () => {
   return (
     <section className="herobg">
-      <div className="bg-deco container bg-whiteBg pb-10 pt-[120px] md:pb-[208px] md:pt-[180px] xl:pb-[176px] xl:pt-[204px]">
+      <div className="bg-deco container bg-whiteBg pb-10 pt-[120px] md:pb-[208px] md:pt-[180px] xl:pb-[176px] xl:pt-[204px] smOnly:flex smOnly:flex-col smOnly:items-center">
         <h1 className="w-[280px] text-2xl font-bold text-black md:w-[440px] md:text-5xl md:leading-tight xl:w-[502px] xl:text-[56px] xl:leading-[1.2] xl:text-blackBg">
           Сайты под ключ <br />с уникальным веб-дизайном
         </h1>
