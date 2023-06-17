@@ -6,16 +6,61 @@
 
 @layer base {
   body {
-    @apply bg-whiteBg font-sans text-blackBg text-base font-normal;
+    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
   }
 }
 
 @layer components {
-
   /*Hero section  */
-  .herobg{
-    background-color: aqua;
+  .herobg {
+    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+      linear-gradient(154deg, #1729b2, #4475eb);
+    background-repeat: no-repeat;
   }
 
+  .bg-deco {
+    background-image: url('/images/hero/mac-mobile@1x.png'), url('/svg/hero/wave-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center bottom 120px, bottom right -2px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/images/hero/mac-mobile@2x.png'), url('/svg/hero/wave-mobile.svg');
+      background-size: 165px 138px, auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .herobg {
+      background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+        linear-gradient(125deg, #1729b2, #4475eb);
+    }
+
+    .bg-deco {
+      background-image: url('/images/hero/mac-tablet@1x.png'), url('/svg/hero/wave-tablet.svg');
+      background-position: right -60px bottom 60px, right -2px bottom;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/images/hero/mac-tablet@2x.png'), url('/svg/hero/wave-tablet.svg');
+        background-size: 427px 354px, auto;
+      }
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .herobg {
+      background-image: linear-gradient(to right, #fff 50%, transparent 50%),
+        linear-gradient(151deg, #1729b2, #4475eb);
+    }
+
+    .bg-deco {
+      background-image: url('/images/hero/mac-desktop@1x.png'), url('/svg/hero/wave-desktop.svg');
+      background-position: right 13px bottom 80px, right -72px bottom;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/images/hero/mac-desktop@2x.png'), url('/svg/hero/wave-desktop.svg');
+        background-size: 724px 600px, auto;
+      }
+    }
+  }
   /*Hero section  */
 }
