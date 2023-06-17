@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import PublicContractList from '@/components/PublicContractList/PublicContractList';
+import PublicContractList from '@/components/common/PublicContractList/PublicContractList';
 
 import { publicContractText } from '@/public/materials/publicContract';
 
