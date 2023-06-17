@@ -5,14 +5,15 @@ import Sections from '@/components/typography/Sections/Sections';
 import NumberOneSvg from '@/public/images/stagesOfWork/numberOne.svg';
 import NumberTwoSvg from '@/public/images/stagesOfWork/numberTwo.svg';
 import NumberThreeSvg from '@/public/images/stagesOfWork/numberThree.svg';
+import Title from '@/components/typography/Title/Title';
 
 const StagesOfWorkSection: FC = () => {
   return (
     <Sections>
       <div className="container">
-        <h2 className="text-center text-2xl font-bold md:text-[32px] md:leading-[1.13] xl:text-5xl">
+        <Title tag="h2" className="text-center">
           Этапы работы
-        </h2>
+        </Title>
 
         <ul className="mt-6 text-sm md:mt-10 md:grid md:grid-cols-3 md:gap-4 xl:mt-[60px] xl:gap-8 xl:text-base">
           <li className="flex flex-col gap-4 md:gap-6 xl:gap-10">

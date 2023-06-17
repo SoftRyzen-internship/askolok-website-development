@@ -9,8 +9,9 @@ const Title: FC<ITitle> = ({ children, className, tag = 'h2' }) => {
     <Tag
       className={cn(
         {
-          ['text-[32px] font-extrabold leading-10  md:text-[44px] xl:text-7xl']: tag == 'h1',
-          [' text-2xl font-semibold md:text-[32px] md:leading-snug xl:text-[40px] xl:leading-[1.4]']:
+          ['text-2xl font-bold text-black  md:text-5xl md:leading-tight xl:text-[56px] xl:leading-[1.2] xl:text-blackBg']:
+            tag == 'h1',
+          ['text-2xl font-bold text-black md:text-[32px] md:leading-[1.13] xl:text-5xl xl:text-blackBg']:
             tag == 'h2',
         },
         className

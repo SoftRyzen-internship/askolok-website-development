@@ -1,7 +1,8 @@
 export interface IButtonProps {
   content: string;
-  type?: 'button' | 'submit';
+  type: 'button' | 'submit';
   color?: 'black' | 'white' | 'gradient';
   rounded?: boolean;
   className?: string;
+  onClick?: () => void;
 }
