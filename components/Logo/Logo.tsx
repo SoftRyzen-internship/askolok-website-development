@@ -1,29 +1,19 @@
 import NextLink from 'next/link';
+import Image from 'next/image';
 
-import LogoA from '@/public/logoA.svg';
+import LogoProps from './LogoTypes';
 
-// import Logo from '@/public/assets/icon/logo.svg';
-// import LogoM from '@/public/assets/icon/logoM.svg';
-
-function CompanyLogo() {
-  // const { less768px } = useBreakpoints();
-
+function CompanyLogo(props: LogoProps) {
+  const { tabWidth } = props;
   return (
     <NextLink href="/" className="cursor-pointer">
-      <LogoA
-        aria-label="Логотип компанії"
-        className="hover:inherit focus:inherit mx-auto fill-inherit"
-      />
-
-      {/* <Logo
-          aria-label="Логотип компанії"
-          className="hover:inherit focus:inherit mx-auto fill-inherit"
-        /> */}
-
-      {/* <p
-        className={`font-tanPearl mx-auto max-w-[44px] text-[12px] uppercase md:max-w-[85px] md:text-[24px] md:leading-8`}
-      >       
-      </p> */}
+      <div
+        className={`relative h-[38px] w-[130px] ${
+          tabWidth ? 'md:h-[66px] md:w-[232px]' : ''
+        } md:h-[44px] md:w-[152px] xl:h-[66px] xl:w-[232px]`}
+      >
+        <Image src="/images/header/logoA.svg" alt="Логотип компанії" fill={true} />
+      </div>
     </NextLink>
   );
 }
