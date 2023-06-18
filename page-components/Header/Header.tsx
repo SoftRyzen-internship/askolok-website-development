@@ -69,7 +69,7 @@ function Header() {
                           smooth={true}
                           duration={500}
                           key={item.id}
-                          className={`cursor-pointer py-2 text-blackBg`}
+                          className={`cursor-pointer py-4 text-blackBg`}
                         >
                           {item.name}
                         </Link>
@@ -113,7 +113,7 @@ function Header() {
                     </Disclosure.Button>
                   </div>
                   <CompanyLogo tabWidth />
-                  <ul className="mt-[60px] flex flex-col items-center justify-center space-y-10 md:mt-20 md:space-y-16">
+                  <ul className="mt-[60px] flex flex-col items-center justify-center space-y-10 pb-10 md:mt-20 md:space-y-16">
                     {navigation.map(item => (
                       <li
                         key={item.id}
