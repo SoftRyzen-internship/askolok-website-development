@@ -9,8 +9,8 @@ export default function Home() {
     <Layout>
       <HeroSection />
       <AdvantagesSection />
-      <RequestSection />
       <StagesOfWorkSection />
+      <RequestSection />
     </Layout>
   );
 }

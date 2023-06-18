@@ -1,4 +1,4 @@
-import { IAdvantageCardProps } from '@/components/AdvantageCard/AdvantageCard.props';
+import { IAdvantageCardProps } from '@/components/common/AdvantageCard/AdvantageCard.props';
 
 export const advantages: IAdvantageCardProps[] = [
   {
