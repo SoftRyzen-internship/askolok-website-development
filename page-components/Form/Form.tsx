@@ -23,7 +23,8 @@ const Form: FC = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex max-w-[444px] flex-col px-5 pb-10 md:px-8 md:pb-[60px] md:pt-2"
+      // className="flex w-full max-w-[380px] flex-col px-5 pb-10 md:px-8 md:pb-[60px] md:pt-2"
+      className="flex w-full max-w-[380px] grow flex-col "
     >
       <h2 className="mb-8 text-[24px] font-bold leading-[0.95]">Оставить заявку</h2>
 
