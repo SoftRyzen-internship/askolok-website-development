@@ -1,14 +1,15 @@
 import { FC } from 'react';
+import Link from 'next/link';
+
+import { services } from '@/public/materials/services';
 
 import ServiceCard from '@/components/common/ServiceCard/ServiceCard';
 import Title from '@/components/typography/Title/Title';
-
-import { services } from '@/public/materials/services';
-import Link from 'next/link';
+import Sections from '@/components/typography/Sections/Sections';
 
 const ServiceSection: FC = () => {
   return (
-    <section>
+    <Sections>
       <div className="container py-10 text-center md:py-[60px] xl:pb-20 xl:pt-[76px]">
         <Title tag="h2">Услуги и цены</Title>
         <ul className="mt-6 flex flex-col gap-2 md:mt-10 md:gap-3 xl:mt-[60px] xl:gap-5">
@@ -25,7 +26,7 @@ const ServiceSection: FC = () => {
           Оплатить
         </Link>
       </div>
-    </section>
+    </Sections>
   );
 };
 

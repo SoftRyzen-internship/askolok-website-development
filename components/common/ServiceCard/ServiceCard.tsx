@@ -5,12 +5,12 @@ import { IServiceCardProps } from './ServiceCard.props';
 const ServiceCard: FC<IServiceCardProps> = ({ service, price, className }) => {
   return (
     <li className={`flex rounded border-[1px] border-[#ccc] md:h-[72px] xl:h-[76px] ${className}`}>
-      <p className="flex w-4/5 text-left items-center border-r-[1px] border-[#ccc] px-2 text-sm text-black md:px-3 md:text-base xl:w-[85.47%] xl:px-6 xl:text-xl xl:text-blackBg smOnly:py-4 ">
+      <p className="flex w-4/5 items-center border-r-[1px] border-[#ccc] px-2 text-left text-sm text-black md:px-3 md:text-base xl:w-[85.47%] xl:px-6 xl:text-xl xl:text-blackBg smOnly:py-4 ">
         {service}
       </p>
-      <p className="flex w-1/5 items-center justify-center bg-blueBg px-1 text-center text-base font-semibold text-[#1B2EB6] md:text-xl xl:w-[14.53%] xl:text-2xl">
+      <span className="flex w-1/5 items-center justify-center bg-blueBg px-1 text-center text-base font-semibold text-[#1B2EB6] md:text-xl xl:w-[14.53%] xl:text-2xl">
         {price}
-      </p>
+      </span>
     </li>
   );
 };
