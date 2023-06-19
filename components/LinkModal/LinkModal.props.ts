@@ -1,5 +1,5 @@
 export interface IModalsLinkProps {
   text: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
   childrenName: 'Policy' | 'PublicContract';
 }

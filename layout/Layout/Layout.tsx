@@ -10,7 +10,7 @@ const Layout: FC<ILayout> = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="flex flex-col h-full min-h-screen ">
+      <div className="flex h-full min-h-screen flex-col ">
         <main className="flex-grow">
           {children}
           <Toaster
@@ -21,7 +21,7 @@ const Layout: FC<ILayout> = ({ children }) => {
             // }}
           />
         </main>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );

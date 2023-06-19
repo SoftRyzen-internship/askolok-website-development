@@ -2,6 +2,8 @@ import { Link, scroller } from 'react-scroll';
 import Image from 'next/image';
 import CompanyLogo from '../../components/Logo/Logo';
 
+import Policy from '../Policy/Policy';
+import PublicContract from '../PublicContract/PublicContract';
 import LinkModal from '@/components/LinkModal/LinkModal';
 import navigation from './navigation';
 
@@ -25,10 +27,10 @@ function Footer() {
 
         {/* Nav */}
         <div className="mt-6 flex justify-between sm:w-[430px] md:mt-0 md:w-auto md:content-start md:justify-end">
-          <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:grid-cols-1 xl:gap-5 xl:text-base">
+          <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:mr-16 md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:mr-[170px] xl:grid-cols-1 xl:gap-5 xl:text-base">
             {navigation.map(item => (
               <li
-                className="flex-nowrap hover:font-semibold hover:underline"
+                className="w-[110px] flex-nowrap hover:font-semibold hover:underline md:w-[124px] xl:w-[141px]"
                 key={item.id}
                 onClick={() => {
                   handleClick(item.href);
@@ -55,7 +57,7 @@ function Footer() {
           </ul>
 
           {/* email image */}
-          <div className="md:mb-10 md:ml-16 xl:mb-[66px] xl:ml-[175px]">
+          <div className="md:mb-10 xl:mb-[66px]">
             <div className="flex flex-col">
               <p className="text-xs md:text-sm xl:text-base">askolok@gmail.com</p>
             </div>
@@ -74,12 +76,16 @@ function Footer() {
         </div>
 
         {/* policy contract */}
-        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-[110px] xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
+        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-[108px] xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
           <li>
-            <LinkModal childrenName="Policy" text="Политика конфиденциальности" />
+            <LinkModal childrenName="Policy" text="Политика конфиденциальности">
+              <Policy />
+            </LinkModal>
           </li>
           <li>
-            <LinkModal childrenName="PublicContract" text="Договор оферты" />
+            <LinkModal childrenName="PublicContract" text="Договор оферты">
+              <PublicContract />
+            </LinkModal>
           </li>
         </ul>
       </div>
