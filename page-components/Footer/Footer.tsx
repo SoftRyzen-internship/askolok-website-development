@@ -1,9 +1,9 @@
 import { Link, scroller } from 'react-scroll';
+import Image from 'next/image';
 import CompanyLogo from '../../components/Logo/Logo';
 
-import navigation from './navigation';
-import Image from 'next/image';
 import LinkModal from '@/components/LinkModal/LinkModal';
+import navigation from './navigation';
 
 function Footer() {
   const handleClick = (element: string) => {
@@ -24,7 +24,6 @@ function Footer() {
         </div>
 
         {/* Nav */}
-
         <div className="mt-6 flex justify-between sm:w-[430px] md:mt-0 md:w-auto md:content-start md:justify-end">
           <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:grid-cols-1 xl:gap-5 xl:text-base">
             {navigation.map(item => (
@@ -75,7 +74,7 @@ function Footer() {
         </div>
 
         {/* policy contract */}
-        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-[104px] xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
+        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-[110px] xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
           <li>
             <LinkModal childrenName="Policy" text="Политика конфиденциальности" />
           </li>
