@@ -1,18 +1,16 @@
 import { FC, useState } from 'react';
 import Image from 'next/image';
+import { Element } from 'react-scroll';
 
 import Sections from '@/components/typography/Sections/Sections';
 import Button from '@/components/Button/Button';
 import Modal from '@/components/modal/Modal';
 import Form from '../Form/Form';
-import PublicContract from '../PublicContract/PublicContract';
-import Policy from '../Policy/Policy';
-import LinkModal from '@/components/LinkModal/LinkModal';
 
 const RequestSection: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <>
+    <Element name="submitApplication">
       <Sections className="bg-blueBg ">
         <div className="container xl:relative xl:pt-[86px]">
           <div className="w-full rounded-br-[60px] bg-blueBgGradient text-whiteBg shadow-primaryShadow xl:px-[104px] xl:py-10 smOnly:flex-col smOnly:items-center smOnly:px-4 smOnly:pt-4 mdOnly:justify-between mdOnly:pl-10 mdOnly:pr-5 mdOnly:pt-10 notXl:flex">
@@ -47,7 +45,7 @@ const RequestSection: FC = () => {
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} childrenName="Form">
         <Form />
       </Modal>
-    </>
+    </Element>
   );
 };
 

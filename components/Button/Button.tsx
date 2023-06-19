@@ -8,8 +8,9 @@ const Button: FC<IButtonProps> = ({
   type = 'button',
   color = 'black',
   rounded = true,
-  onClick,
   className,
+  disabled = false,
+  onClick,
 }) => {
   return (
     <button
@@ -28,6 +29,7 @@ const Button: FC<IButtonProps> = ({
       )}
       onClick={onClick}
       type={type}
+      disabled={disabled}
     >
       {content}
     </button>
