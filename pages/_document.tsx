@@ -1,6 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
+import { metaSeo } from '@/public/materials/metaSeo';
+
 export default function Document() {
+  const { descriprions, title } = metaSeo;
   return (
     <Html lang="ru">
       <Head>
@@ -12,6 +15,9 @@ export default function Document() {
         <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <meta property="og:description" content={descriprions} />
+        <meta name="description" content={descriprions} />
+        <meta property="og:title" content={title} />
       </Head>
       <body>
         <Main />

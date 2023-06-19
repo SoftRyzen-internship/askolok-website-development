@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import Layout from '@/layout/Layout/Layout';
 import HeroSection from '@/page-components/HeroSection/HeroSection';
 import AdvantagesSection from '@/page-components/AdvantagesSection/AdvantagesSection';
@@ -7,12 +9,17 @@ import ServiceSection from '@/page-components/ServiceSection/ServiceSection';
 
 export default function Home() {
   return (
-    <Layout>
-      <HeroSection />
-      <AdvantagesSection />
-      <StagesOfWorkSection />
-      <RequestSection />
-      <ServiceSection/>
+    <>
+      <Head>
+        <title>Асколок Анастасия</title>
+      </Head>
+      <Layout>
+        <HeroSection />
+        <AdvantagesSection />
+        <StagesOfWorkSection />
+        <RequestSection />
+        <ServiceSection/>
     </Layout>
+    </>
   );
 }

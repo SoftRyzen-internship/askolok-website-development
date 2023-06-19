@@ -5,8 +5,8 @@ import { toast } from 'react-hot-toast';
 import Input from '@/components/form/Input/Input';
 import Button from '@/components/Button/Button';
 
-import { FormInputsType } from './Form.pors';
 import { fieldsParams } from './fieldsSample';
+import { FormInputsType } from './Form.pors';
 
 const Form: FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -65,14 +65,10 @@ const Form: FC = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      // className="flex w-full max-w-[380px] flex-col px-5 pb-10 md:px-8 md:pb-[60px] md:pt-2"
-      className="flex w-full max-w-[380px] grow flex-col "
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-[380px] grow flex-col ">
       <h2 className="mb-8 text-[24px] font-bold leading-[0.95]">Оставить заявку</h2>
 
-      <div className="flex flex-col gap-3 mb-4">
+      <div className="mb-4 flex flex-col gap-3">
         <Input
           register={register('name', { ...fieldsParams.name })}
           placeholder="Вашe Имя"
@@ -97,7 +93,7 @@ const Form: FC = () => {
         content={isSubmitting ? 'Отправка...' : 'Отправить'}
         color="gradient"
         type="submit"
-        className="w-full p-[14px] text-center text-lg font-bold text-whiteBg disabled:bg-gradient-to-r disabled:from-blackBg disabled:to-blackBg disabled:font-normal"
+        className="w-full p-[14px] text-center text-lg font-bold text-whiteBg disabled:bg-gradient-to-r disabled:from-blackBg disabled:to-blackBg disabled:font-normal smOnly:min-w-[210px]"
         disabled={isSubmitting}
       />
     </form>

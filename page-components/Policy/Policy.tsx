@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import PolicyList from '@/components/policy/PolicyList/PolicyList';
-
 import { policyText } from '@/public/materials/policy';
+
+import PolicyList from '@/components/policy/PolicyList/PolicyList';
 
 const Policy: FC = () => {
   const { sections, text1, text2, text3, title, subtitle } = policyText;
