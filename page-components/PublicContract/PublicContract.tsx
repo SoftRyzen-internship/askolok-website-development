@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import PublicContractList from '@/components/common/PublicContractList/PublicContractList';
-
 import { publicContractText } from '@/public/materials/publicContract';
+
+import PublicContractList from '@/components/common/PublicContractList/PublicContractList';
 
 const PublicContract: FC = () => {
   const { sectionFirstTitle, subtitle, title, sections, date } = publicContractText;

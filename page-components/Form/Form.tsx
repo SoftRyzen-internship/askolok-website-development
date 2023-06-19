@@ -2,9 +2,10 @@ import { FC } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import Input from '@/components/form/Input/Input';
+import Button from '@/components/Button/Button';
 
-import { FormInputsType } from './Form.pors';
 import { fieldsParams } from './fieldsSample';
+import { FormInputsType } from './Form.pors';
 
 const Form: FC = () => {
   const {
@@ -21,11 +22,7 @@ const Form: FC = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      // className="flex w-full max-w-[380px] flex-col px-5 pb-10 md:px-8 md:pb-[60px] md:pt-2"
-      className="flex w-full max-w-[380px] grow flex-col "
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-[380px] grow flex-col ">
       <h2 className="mb-8 text-[24px] font-bold leading-[0.95]">Оставить заявку</h2>
 
       <div className="mb-4 flex flex-col gap-3">
@@ -49,12 +46,7 @@ const Form: FC = () => {
         />
       </div>
 
-      <button
-        type="submit"
-        className="w-full rounded bg-blueBgGradient p-[14px] text-center text-lg font-bold text-whiteBg"
-      >
-        Отправить
-      </button>
+      <Button type="submit" color="gradient" content="Отправить" className="smOnly:min-w-[210px]" />
     </form>
   );
 };
