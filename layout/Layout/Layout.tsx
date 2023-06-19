@@ -17,15 +17,15 @@ const Layout: FC<ILayout> = ({ children }) => {
         />
       </Head>
       <Header />
-      <div className=" flex h-full min-h-screen flex-col">
+      <div className="flex flex-col h-full min-h-screen ">
         <main className="flex-grow">
           {children}
           <Toaster
             position="top-right"
             reverseOrder={false}
-            toastOptions={{
-              duration: 15000,
-            }}
+            // toastOptions={{
+            //   duration: 15000,
+            // }}
           />
         </main>
         <Footer />
