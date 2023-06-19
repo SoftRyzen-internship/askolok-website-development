@@ -3,6 +3,8 @@ import { Toaster } from 'react-hot-toast';
 import Head from 'next/head';
 
 import { ILayout } from './Layout.props';
+import Header from '@/page-components/Header/Header';
+import Footer from '@/page-components/Footer/Footer';
 
 const Layout: FC<ILayout> = ({ children }) => {
   return (
@@ -14,6 +16,7 @@ const Layout: FC<ILayout> = ({ children }) => {
           content="Одностраничный сайт визитка человека, который занимается разработкой сайтов"
         />
       </Head>
+      <Header />
       <div className=" flex h-full min-h-screen flex-col">
         <main className="flex-grow">
           {children}
@@ -25,6 +28,7 @@ const Layout: FC<ILayout> = ({ children }) => {
             }}
           />
         </main>
+        <Footer />
       </div>
     </>
   );
