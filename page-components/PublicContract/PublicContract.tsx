@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-import PublicContractList from '@/components/common/PublicContractList/PublicContractList';
-
 import { publicContractText } from '@/public/materials/publicContract';
+
+import PublicContractList from '@/components/common/PublicContractList/PublicContractList';
 
 const PublicContract: FC = () => {
   const { sectionFirstTitle, subtitle, title, sections, date } = publicContractText;
   return (
-    <div className="container text-xl text-black">
+    <div className="text-sm text-black md:text-base xl:text-xl">
       <h2 className="mb-2 text-center">{title}</h2>
       <h3 className="mb-[60px] text-center">{subtitle}</h3>
       <span className="mb-5 block">{date}</span>

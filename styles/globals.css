@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-base font-normal bg-whiteBg text-blackBg;
+    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
   }
 }
 
@@ -104,4 +104,40 @@
     }
   }
   /*Hero section  */
+
+  /*Scrollbar Modal  */
+  .modal::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  .modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    margin-top: 156px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  .modal::-webkit-scrollbar-thumb {
+    background-color: rgba(37, 37, 37, 0.4);
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  .modal::-webkit-scrollbar-thumb:hover {
+    background-color: #1729b2;
+  }
+  @media (min-width: 768px) {
+    .modal::-webkit-scrollbar {
+      width: 16px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .modal::-webkit-scrollbar {
+      width: 24px;
+    }
+  }
+  /*Scrollbar Modal */
 }

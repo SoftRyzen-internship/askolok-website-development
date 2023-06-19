@@ -1,12 +1,16 @@
-import { FC } from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { FC, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 
 import Input from '@/components/form/Input/Input';
+import Button from '@/components/Button/Button';
 
-import { FormInputsType } from './Form.pors';
 import { fieldsParams } from './fieldsSample';
+import { FormInputsType } from './Form.pors';
 
 const Form: FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -14,17 +18,54 @@ const Form: FC = () => {
     formState: { errors },
   } = useForm<FormInputsType>();
 
-  const onSubmit: SubmitHandler<FormInputsType> = data => {
-    console.log(data);
+  const sendMessage = async (data: FormInputsType) => {
+    const message = `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}`;
+    const response = await fetch(
+      `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `chat_id=${process.env.NEXT_PUBLIC_GROUP_ID}&text=${encodeURIComponent(message)}`,
+      }
+    );
+    const responseData = await response.json();
 
-    reset();
+    if (responseData.ok) {
+      return responseData;
+    } else {
+      throw new Error('Не удалось отправить.');
+    }
+  };
+
+  const onSubmit = async (data: FormInputsType) => {
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const messagePromise = sendMessage(data);
+
+    toast.promise(messagePromise, {
+      loading: 'Отправка...',
+      success: 'Данные успешно отправлены!',
+      error: 'Не удалось отправить.',
+    });
+
+    try {
+      await messagePromise;
+      reset();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="flex max-w-[444px] flex-col px-5 pb-10 md:px-8 md:pb-[60px] md:pt-2"
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className="flex w-full max-w-[380px] grow flex-col ">
       <h2 className="mb-8 text-[24px] font-bold leading-[0.95]">Оставить заявку</h2>
 
       <div className="mb-4 flex flex-col gap-3">
@@ -48,12 +89,13 @@ const Form: FC = () => {
         />
       </div>
 
-      <button
+      <Button
+        content={isSubmitting ? 'Отправка...' : 'Отправить'}
+        color="gradient"
         type="submit"
-        className="w-full rounded bg-blueBgGradient p-[14px] text-center text-lg font-bold text-whiteBg"
-      >
-        Отправить
-      </button>
+        className="w-full p-[14px] text-center text-lg font-bold text-whiteBg disabled:bg-gradient-to-r disabled:from-blackBg disabled:to-blackBg disabled:font-normal smOnly:min-w-[210px]"
+        disabled={isSubmitting}
+      />
     </form>
   );
 };
