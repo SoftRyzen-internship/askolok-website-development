@@ -12,7 +12,7 @@ const AdvantagesSection: FC = () => {
         <h2 className="text-center text-2xl font-bold text-black md:text-[32px] md:leading-[1.125] xl:text-5xl xl:leading-tight xl:text-blackBg">
           Преимущества
         </h2>
-        <ul className="mt-6 flex flex-col gap-6 md:flex-row md:flex-wrap md:justify-center md:gap-8">
+        <ul className="flex flex-col gap-6 mt-6 md:mt-10 xl:mt-[60px] md:flex-row md:flex-wrap md:justify-center md:gap-8">
           {advantages.map(({ iconUrl, alt, title, description, color }) => (
             <AdvantageCard
               key={title}
