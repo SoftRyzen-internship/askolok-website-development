@@ -4,5 +4,6 @@ export interface IButtonProps {
   color?: 'black' | 'white' | 'gradient';
   rounded?: boolean;
   className?: string;
+  disabled?: boolean;
   onClick?: () => void;
 }
