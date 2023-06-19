@@ -11,7 +11,7 @@ const PolicyItem: FC<IPolicyItemProps> = ({ subtitle }) => {
         <p className="">{text}</p>
       </div>
       {notes && (
-        <ul className={`pl-5 ${notes ? 'py-4' : 'py-0'}`}>
+        <ul className={`pl-5 ${notes ? 'py-4' : 'py-0'} text-sm md:text-base `}>
           {notes.map((note, index) => (
             <li key={index} className="flex  gap-1">
               <span className="min-w-[15px]">{note.marker}</span>
