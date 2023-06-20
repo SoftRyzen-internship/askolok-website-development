@@ -10,7 +10,7 @@ const HeroSection: FC = () => {
   return (
     <>
       <section className="gradient">
-        <div className="decorations overflow-hidden m-auto h-[100%] max-w-[480px] md:max-w-[768px] xl:max-w-[1440px] xl:min-w-[1280px]">
+        <div className="decorations m-auto h-[100%] max-w-[480px] overflow-hidden md:max-w-[768px] xl:min-w-[1280px] xl:max-w-[1440px]">
           <div className="container pb-10 pt-[120px] md:pb-[208px] md:pt-[180px] xl:pb-[176px] xl:pt-[204px] smOnly:flex smOnly:flex-col smOnly:items-center">
             <div className="relative z-10">
               <Title tag="h1" className="w-[280px] md:w-[440px] xl:w-[502px]">
