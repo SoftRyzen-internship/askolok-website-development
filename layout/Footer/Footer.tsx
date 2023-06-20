@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import navigation from './navigation';
 
-import CompanyLogo from '../../components/Logo/Logo';
+import CompanyLogo from '@/components/Logo/Logo';
 import LinkModal from '@/components/LinkModal/LinkModal';
 import Policy from '@/page-components/Policy/Policy';
 import PublicContract from '@/page-components/PublicContract/PublicContract';
