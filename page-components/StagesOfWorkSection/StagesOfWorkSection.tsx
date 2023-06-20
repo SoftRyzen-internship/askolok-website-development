@@ -2,6 +2,7 @@ import { FC } from 'react';
 import { Element } from 'react-scroll';
 
 import { stageOfWorksText } from '@/public/materials/stageOfWorksText';
+import { navigationSection } from '@/utils/navigationSection';
 
 import Sections from '@/components/typography/Sections/Sections';
 import Title from '@/components/typography/Title/Title';
@@ -14,7 +15,7 @@ import NumberThreeSvg from '@/public/images/stagesOfWork/numberThree.svg';
 const StagesOfWorkSection: FC = () => {
   const { columnOne, columnTwo, columnThree } = stageOfWorksText;
   return (
-    <Element name="stagesOfWork">
+    <Element name={navigationSection.stageOfWork}>
       <Sections>
         <div className="container">
           <Title tag="h2" className="text-center">

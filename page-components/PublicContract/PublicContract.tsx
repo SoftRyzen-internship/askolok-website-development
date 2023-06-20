@@ -7,7 +7,7 @@ import PublicContractList from '@/components/common/PublicContractList/PublicCon
 const PublicContract: FC = () => {
   const { sectionFirstTitle, subtitle, title, sections, date } = publicContractText;
   return (
-    <div className="text-sm text-black md:text-base xl:text-xl">
+    <div className="text-sm text-black md:text-base xl:text-xl smOnly:pt-5">
       <h2 className="mb-2 text-center">{title}</h2>
       <h3 className="mb-[60px] text-center">{subtitle}</h3>
       <span className="mb-5 block">{date}</span>

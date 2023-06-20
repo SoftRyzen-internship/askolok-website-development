@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Toaster } from 'react-hot-toast';
 
-import Header from '@/page-components/Header/Header';
-import Footer from '@/page-components/Footer/Footer';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 import { ILayout } from './Layout.props';
 
@@ -16,9 +16,9 @@ const Layout: FC<ILayout> = ({ children }) => {
           <Toaster
             position="top-right"
             reverseOrder={false}
-            // toastOptions={{
-            //   duration: 15000,
-            // }}
+            toastOptions={{
+              duration: 3000,
+            }}
           />
         </main>
         <Footer />

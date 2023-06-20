@@ -33,7 +33,7 @@ const Modal: FC<IModalsProps> = ({ isOpen, setIsOpen, children, childrenName }) 
           <div className="fixed inset-0  flex items-center justify-center p-5 md:p-8">
             <Dialog.Panel
               className={cn(
-                'flex  flex-col rounded bg-white px-5 pb-10 pt-5 md:gap-2 md:px-8 md:pb-[60px] md:pt-7',
+                'relative flex flex-col rounded-xl bg-white px-5 py-10 md:gap-2 md:px-8 md:py-[60px] ',
                 {
                   ['w-full max-w-[444px]']: childrenName === 'Form',
                   ['modal max-h-full w-full overflow-y-scroll scroll-smooth']:
@@ -43,7 +43,7 @@ const Modal: FC<IModalsProps> = ({ isOpen, setIsOpen, children, childrenName }) 
             >
               <button
                 onClick={() => setIsOpen(false)}
-                className="ml-auto text-blackBg duration-300 hover:text-[#1729B2]"
+                className="absolute right-5 top-5 text-blackBg duration-300 hover:text-[#1729B2] md:right-7 md:top-7"
               >
                 <CloseSvg
                   height={24}
