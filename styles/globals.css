@@ -6,16 +6,16 @@
 
 @layer base {
   body {
-    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
+    @apply font-sans text-base font-normal bg-whiteBg text-blackBg;
   }
 }
 
 @layer components {
   /*Hero section  */
-  .gradient {
+  /* .gradient {
     background-image: linear-gradient(130deg, #1729b2, #4475eb);
     background-repeat: no-repeat;
-  }
+  } */
 
   .decorations {
     position: relative;
@@ -51,23 +51,23 @@
     bottom: 0;
     left: 0;
 
-    background-image: url('/svg/hero/wave-mobile-b.svg');
+    background-image: url('/svg/hero/wave-mobile.svg');
     background-repeat: no-repeat;
-    background-position: bottom right -2px;
+    background-position: bottom right;
 
     background-color: #fff;
-
-    mix-blend-mode: screen;
   }
 
-  @media (min-width: 480px) {
+  /* @media (min-width: 480px) {
     .gradient {
       background-position-x: 170px;
     }
-  }
+  } */
 
   @media (min-width: 768px) {
     .gradient {
+      background-image: linear-gradient(130deg, #1729b2, #4475eb);
+      background-repeat: no-repeat;
       background-position-x: 50vw;
     }
 
@@ -83,7 +83,9 @@
 
     .decorations::after {
       background-image: url('/svg/hero/wave-tablet-b.svg');
-      background-position: right -2px bottom;
+      background-position: right bottom;
+
+      mix-blend-mode: screen;
     }
   }
 
@@ -100,7 +102,7 @@
 
     .decorations::after {
       background-image: url('/svg/hero/wave-desktop-b.svg');
-      background-position: right -72px bottom;
+      background-position: right -80px bottom;
     }
   }
   /*Hero section  */
