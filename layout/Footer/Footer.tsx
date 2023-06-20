@@ -43,12 +43,11 @@ function Footer() {
                 }}
               >
                 <Link
-                  tabIndex={0}
                   to={item.href}
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-80}
+                  offset={-114}
                   key={item.id}
                   className={`cursor-pointer py-2`}
                 >

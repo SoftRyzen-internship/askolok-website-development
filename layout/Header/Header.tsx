@@ -39,7 +39,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-1000 ${
+      className={`fixed left-0 right-0 top-0 z-50 w-[100vw] transition-all duration-1000 ${
         headerBackground ? 'bg-whiteBg/90 ' : 'bg-transparent'
       }`}
     >
@@ -63,10 +63,9 @@ function Header() {
                         >
                           <Link
                             activeClass={css.active}
-                            tabIndex={0}
                             to={item.href}
                             spy={true}
-                            offset={-80}
+                            offset={-114}
                             smooth={true}
                             duration={500}
                             key={item.id}

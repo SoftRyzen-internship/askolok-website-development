@@ -1,4 +1,4 @@
-import { FC, useState, Fragment } from 'react';
+import { FC, Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import cn from 'classnames';
 
@@ -43,12 +43,16 @@ const Modal: FC<IModalsProps> = ({ isOpen, setIsOpen, children, childrenName }) 
             >
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute right-5 top-5 text-blackBg duration-300 hover:text-[#1729B2] md:right-7 md:top-7"
+                className={cn(` text-blackBg duration-300 hover:text-[#1729B2] `, {
+                  ['absolute right-5 top-5 md:right-7 md:top-7']: childrenName === 'Form',
+                  ['sticky right-0 top-0 ml-auto']:
+                    childrenName === 'Policy' || childrenName === 'PublicContract',
+                })}
               >
                 <CloseSvg
                   height={24}
                   width={24}
-                  aria-label="крестик закрівающий модальное окно"
+                  aria-label="Кнопка закрывающая модальное окно"
                   className="text-current"
                 />
               </button>

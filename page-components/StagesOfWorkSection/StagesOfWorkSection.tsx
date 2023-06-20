@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Element } from 'react-scroll';
 
-import { stageOfWorksText } from '@/public/materials/stageOfWorksText';
+import stageOfWorksText from '@/public/materials/stageOfWorksText.json';
 import { navigationSection } from '@/utils/navigationSection';
 
 import Sections from '@/components/typography/Sections/Sections';
