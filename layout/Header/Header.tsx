@@ -44,14 +44,14 @@ function Header() {
       }`}
     >
       <div className="container">
-        <Disclosure as="nav" className="">
+        <Disclosure as="nav">
           {({ open }) => (
             <>
               <div className={`${open && 'hidden'} py-[21px] md:py-8 xl:py-6`}>
                 <div className="flex items-center justify-between">
                   <CompanyLogo />
                   <div className="hidden xl:flex">
-                    <ul className="flex flex-nowrap space-x-[72px]">
+                    <ul className="flex flex-nowrap gap-[72px]">
                       {navigation.map((item, index) => (
                         <li
                           key={item.id}
@@ -95,7 +95,7 @@ function Header() {
                           width={32}
                           height={32}
                           className="block h-8 w-8 text-current md:h-12 md:w-12"
-                          aria-label="Open mobile menu"
+                          aria-label="Открыть мобильное меню"
                         />
                       )}
                     </Disclosure.Button>
@@ -123,7 +123,7 @@ function Header() {
                       </Disclosure.Button>
                     </div>
                     <CompanyLogo tabWidth />
-                    <ul className="mt-[60px] flex flex-col items-center justify-center space-y-10 pb-10 md:mt-20 md:space-y-16">
+                    <ul className="mt-[60px] flex flex-col items-center justify-center gap-10 pb-10 md:mt-20 md:gap-16">
                       {navigation.map(item => (
                         <li
                           key={item.id}

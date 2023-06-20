@@ -96,6 +96,12 @@
   }
   /*Hero section  */
 
+  /* Advantages section */
+  .advantage-card{
+    @apply flex flex-col items-center rounded rounded-br-[60px] px-4 py-10 text-center shadow-primaryShadow md:w-[336px] md:px-10 xl:w-[384px]
+  }
+  /* Advantages section */
+
   /*Scrollbar Modal  */
   .modal::-webkit-scrollbar {
     width: 8px;
