@@ -43,6 +43,7 @@ function Footer() {
                 }}
               >
                 <Link
+                  tabIndex={0}
                   to={item.href}
                   spy={true}
                   smooth={true}

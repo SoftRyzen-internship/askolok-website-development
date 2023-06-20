@@ -62,6 +62,7 @@ function Header() {
                           }}
                         >
                           <Link
+                            tabIndex={0}
                             activeClass={css.active}
                             to={item.href}
                             spy={true}
