@@ -8,22 +8,20 @@ import { ILayout } from './Layout.props';
 
 const Layout: FC<ILayout> = ({ children }) => {
   return (
-    <>
+    <div className="flex h-full min-h-screen flex-col ">
       <Header />
-      <div className="flex h-full min-h-screen flex-col ">
-        <main className="flex-grow">
-          {children}
-          <Toaster
-            position="top-right"
-            reverseOrder={false}
-            toastOptions={{
-              duration: 3000,
-            }}
-          />
-        </main>
-        <Footer />
-      </div>
-    </>
+      <main className="flex-grow">
+        {children}
+        <Toaster
+          position="top-right"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 3000,
+          }}
+        />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
