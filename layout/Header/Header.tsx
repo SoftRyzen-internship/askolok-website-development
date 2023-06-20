@@ -39,7 +39,7 @@ function Header() {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-1000 ${
+      className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-1000 ${
         headerBackground ? 'bg-whiteBg/90 ' : 'bg-transparent'
       }`}
     >
@@ -51,7 +51,7 @@ function Header() {
                 <div className="flex items-center justify-between">
                   <CompanyLogo />
                   <div className="hidden xl:flex">
-                    <ul className="flex flex-nowrap  space-x-[72px]">
+                    <ul className="flex flex-nowrap space-x-[72px]">
                       {navigation.map((item, index) => (
                         <li
                           key={item.id}
@@ -66,7 +66,7 @@ function Header() {
                             tabIndex={0}
                             to={item.href}
                             spy={true}
-                            offset={-30}
+                            offset={-80}
                             smooth={true}
                             duration={500}
                             key={item.id}
@@ -85,7 +85,11 @@ function Header() {
                     </ul>
                   </div>
                   <div className="-mr-1 flex xl:hidden">
-                    <Disclosure.Button className="inline-flex items-center justify-center mdOnly:text-white">
+                    <Disclosure.Button
+                      className={`inline-flex items-center justify-center transition-all duration-300 ${
+                        headerBackground ? 'text-blackBg' : 'mdOnly:text-white'
+                      } `}
+                    >
                       <span className="sr-only ">Open main menu</span>
                       {!open && (
                         <MenuIcon

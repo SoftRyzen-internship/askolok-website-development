@@ -3,20 +3,24 @@ import { IFieldsParams } from './Form.pors';
 export const fieldsParams: IFieldsParams = {
   name: {
     required: 'обязательное поле',
+    pattern: {
+      value: /^[\sа-яА-Яa-zA-ZёЁЇїІіЄєҐґ'\-]{2,70}$/,
+      message: 'Проверьте правильность ввода',
+    },
     minLength: {
       value: 2,
       message: 'минимальное кол-во букв 2',
     },
     maxLength: {
-      value: 30,
-      message: 'максимальное кол-во букв 30',
+      value: 70,
+      message: 'максимальное кол-во букв 70',
     },
   },
 
   phone: {
     required: 'обязательное поле',
     pattern: {
-      value: /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/,
+      value: /^\+\d{11}$/,
       message: 'Проверьте правильность ввода',
     },
     minLength: {
@@ -24,8 +28,8 @@ export const fieldsParams: IFieldsParams = {
       message: 'минимальное кол-во цифр 5',
     },
     maxLength: {
-      value: 10,
-      message: 'максимальное кол-во цифр 10',
+      value: 14,
+      message: 'максимальное кол-во цифр 14',
     },
   },
 
@@ -41,8 +45,8 @@ export const fieldsParams: IFieldsParams = {
       message: 'минимальное длина 6',
     },
     maxLength: {
-      value: 20,
-      message: 'максимальное длина 20',
+      value: 63,
+      message: 'максимальное длина 63',
     },
   },
 };

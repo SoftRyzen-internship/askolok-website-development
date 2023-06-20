@@ -1,11 +1,12 @@
 import { Link, scroller } from 'react-scroll';
 import Image from 'next/image';
-import CompanyLogo from '../../components/Logo/Logo';
 
-import Policy from '../Policy/Policy';
-import PublicContract from '../PublicContract/PublicContract';
-import LinkModal from '@/components/LinkModal/LinkModal';
 import navigation from './navigation';
+
+import CompanyLogo from '../../components/Logo/Logo';
+import LinkModal from '@/components/LinkModal/LinkModal';
+import Policy from '@/page-components/Policy/Policy';
+import PublicContract from '@/page-components/PublicContract/PublicContract';
 
 function Footer() {
   const handleClick = (element: string) => {
@@ -47,6 +48,7 @@ function Footer() {
                   spy={true}
                   smooth={true}
                   duration={500}
+                  offset={-80}
                   key={item.id}
                   className={`cursor-pointer py-2`}
                 >
@@ -70,13 +72,14 @@ function Footer() {
                 alt="веб-платежи"
                 className="rounded"
                 fill={true}
+                sizes="30vw"
               />
             </div>
           </div>
         </div>
 
         {/* policy contract */}
-        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-[108px] xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
+        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-auto xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
           <li>
             <LinkModal childrenName="Policy" text="Политика конфиденциальности">
               <Policy />
@@ -90,8 +93,8 @@ function Footer() {
         </ul>
       </div>
 
-      <div className="border-t-color: #3D3D3D mt-10 border-t pb-3 md:mt-0 md:pb-5">
-        <p className="mx-auto mt-3 w-[141px] text-center text-[10px] leading-[1.2] text-[#CECECE] md:mt-5 md:w-auto md:text-[12px] md:leading-[1.33] xl:leading-[1.17]">
+      <div className="mt-10 border-t border-t-[#3D3D3D] py-3 md:mt-0 md:py-5">
+        <p className="mx-auto w-[141px] text-center text-[10px] leading-[1.2] text-[#CECECE] md:w-auto md:text-[12px] md:leading-[1.33] xl:leading-[1.17]">
           Анастасия Асколок © 2023 Все права защищены
         </p>
       </div>
