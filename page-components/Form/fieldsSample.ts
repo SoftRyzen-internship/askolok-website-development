@@ -1,10 +1,10 @@
-import { IFieldsParams } from './Form.pors';
+import { IFieldsParams } from './Form.props';
 
 export const fieldsParams: IFieldsParams = {
   name: {
     required: 'обязательное поле',
     pattern: {
-      value: /^[\sа-яА-Яa-zA-ZёЁЇїІіЄєҐґ'\-]{2,70}$/,
+      value: /^[\sа-яА-Яa-zA-ZёЁїІіЄєҐґ'-]{2,70}$/,
       message: 'Проверьте правильность ввода',
     },
     minLength: {
@@ -20,16 +20,16 @@ export const fieldsParams: IFieldsParams = {
   phone: {
     required: 'обязательное поле',
     pattern: {
-      value: /^\+\d{11}$/,
+      value: /^\+\d{9,11}$/,
       message: 'Проверьте правильность ввода',
     },
     minLength: {
-      value: 5,
-      message: 'минимальное кол-во цифр 5',
+      value: 9,
+      message: 'минимальное кол-во цифр 9',
     },
     maxLength: {
-      value: 14,
-      message: 'максимальное кол-во цифр 14',
+      value: 11,
+      message: 'максимальное кол-во цифр 11',
     },
   },
 

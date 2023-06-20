@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { policyText } from '@/public/materials/policy';
+import policyText from '@/public/materials/policy.json';
 
 import PolicyList from '@/components/policy/PolicyList/PolicyList';
 

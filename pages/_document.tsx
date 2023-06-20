@@ -1,9 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-import { metaSeo } from '@/public/materials/metaSeo';
+import metaSeoText from '@/public/materials/metaSeo.json';
 
 export default function Document() {
-  const { descriprions, title } = metaSeo;
+  const { descriprions, title } = metaSeoText;
   return (
     <Html lang="ru">
       <Head>

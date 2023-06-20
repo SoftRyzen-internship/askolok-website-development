@@ -63,10 +63,9 @@ function Header() {
                         >
                           <Link
                             activeClass={css.active}
-                            tabIndex={0}
                             to={item.href}
                             spy={true}
-                            offset={-80}
+                            offset={-114}
                             smooth={true}
                             duration={500}
                             key={item.id}

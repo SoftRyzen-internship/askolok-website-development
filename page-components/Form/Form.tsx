@@ -6,7 +6,7 @@ import Input from '@/components/form/Input/Input';
 import Button from '@/components/Button/Button';
 
 import { fieldsParams } from './fieldsSample';
-import { FormInputsType } from './Form.pors';
+import { FormInputsType } from './Form.props';
 
 const Form: FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
