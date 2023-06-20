@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 
-import Input from '@/components/form/Monputs/Input';
+import Input from '@/components/form/Input/Input';
 import Button from '@/components/Button/Button';
 
 import { fieldsParams } from './fieldsSample';
