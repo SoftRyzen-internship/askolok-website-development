@@ -6,60 +6,103 @@
 
 @layer base {
   body {
-    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
+    @apply font-sans text-base font-normal bg-whiteBg text-blackBg;
   }
 }
 
 @layer components {
   /*Hero section  */
-  .herobg {
-    background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-      linear-gradient(154deg, #1729b2, #4475eb);
+  /* .gradient {
+    background-image: linear-gradient(130deg, #1729b2, #4475eb);
     background-repeat: no-repeat;
+  } */
+
+  .decorations {
+    position: relative;
   }
 
-  .bg-deco {
-    background-image: url('/images/hero/mac-mobile@1x.png'), url('/svg/hero/wave-mobile.svg');
+  .decorations::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1;
+
+    background-image: url('/images/hero/mac-mobile@1x.png');
     background-repeat: no-repeat;
-    background-position: center bottom 120px, bottom right -2px;
+    background-position: center bottom 120px;
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/images/hero/mac-mobile@2x.png'), url('/svg/hero/wave-mobile.svg');
-      background-size: 165px 138px, auto;
+      background-image: url('/images/hero/mac-mobile@2x.png');
+      background-size: 165px 138px;
     }
   }
 
+  .decorations::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-image: url('/svg/hero/wave-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    background-color: #fff;
+  }
+
+  /* @media (min-width: 480px) {
+    .gradient {
+      background-position-x: 170px;
+    }
+  } */
+
   @media (min-width: 768px) {
-    .herobg {
-      background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-        linear-gradient(125deg, #1729b2, #4475eb);
+    .gradient {
+      background-image: linear-gradient(130deg, #1729b2, #4475eb);
+      background-repeat: no-repeat;
+      background-position-x: 50vw;
     }
 
-    .bg-deco {
-      background-image: url('/images/hero/mac-tablet@1x.png'), url('/svg/hero/wave-tablet.svg');
-      background-position: right -60px bottom 60px, right -2px bottom;
+    .decorations::before {
+      background-image: url('/images/hero/mac-tablet@1x.png');
+      background-position: right -40px bottom 60px;
 
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/images/hero/mac-tablet@2x.png'), url('/svg/hero/wave-tablet.svg');
-        background-size: 427px 354px, auto;
+        background-image: url('/images/hero/mac-tablet@2x.png');
+        background-size: 427px 354px;
       }
+    }
+
+    .decorations::after {
+      background-image: url('/svg/hero/wave-tablet-b.svg');
+      background-position: right bottom;
+
+      mix-blend-mode: screen;
     }
   }
 
   @media (min-width: 1280px) {
-    .herobg {
-      background-image: linear-gradient(to right, #fff 50%, transparent 50%),
-        linear-gradient(151deg, #1729b2, #4475eb);
-    }
-
-    .bg-deco {
-      background-image: url('/images/hero/mac-desktop@1x.png'), url('/svg/hero/wave-desktop.svg');
-      background-position: right 13px bottom 80px, right -72px bottom;
+    .decorations::before {
+      background-image: url('/images/hero/mac-desktop@1x.png');
+      background-position: right 13px bottom 80px;
 
       @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/images/hero/mac-desktop@2x.png'), url('/svg/hero/wave-desktop.svg');
-        background-size: 724px 600px, auto;
+        background-image: url('/images/hero/mac-desktop@2x.png');
+        background-size: 724px 600px;
       }
+    }
+
+    .decorations::after {
+      background-image: url('/svg/hero/wave-desktop-b.svg');
+      background-position: right -80px bottom;
     }
   }
   /*Hero section  */
