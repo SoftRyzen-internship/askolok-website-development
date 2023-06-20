@@ -2,6 +2,8 @@ import { FC, useState } from 'react';
 import Image from 'next/image';
 import { Element } from 'react-scroll';
 
+import { navigationSection } from '@/utils/navigationSection';
+
 import Sections from '@/components/typography/Sections/Sections';
 import Button from '@/components/Button/Button';
 import Modal from '@/components/modal/Modal';
@@ -10,7 +12,7 @@ import Form from '../Form/Form';
 const RequestSection: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <Element name="submitApplication">
+    <Element name={navigationSection.request}>
       <Sections className="bg-blueBg ">
         <div className="container xl:relative xl:pt-[86px]">
           <div className="w-full rounded-br-[60px] bg-blueBgGradient text-whiteBg shadow-primaryShadow xl:px-[104px] xl:py-10 smOnly:flex-col smOnly:items-center smOnly:px-4 smOnly:pt-4 mdOnly:justify-between mdOnly:pl-10 mdOnly:pr-5 mdOnly:pt-10 notXl:flex">
