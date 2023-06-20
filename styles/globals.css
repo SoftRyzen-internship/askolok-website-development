@@ -12,11 +12,6 @@
 
 @layer components {
   /*Hero section  */
-  /* .gradient {
-    background-image: linear-gradient(130deg, #1729b2, #4475eb);
-    background-repeat: no-repeat;
-  } */
-
   .decorations {
     position: relative;
   }
@@ -51,18 +46,12 @@
     bottom: 0;
     left: 0;
 
-    background-image: url('/svg/hero/wave-mobile.svg');
+    background-image: url('/images/hero/wave-mobile.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
 
     background-color: #fff;
   }
-
-  /* @media (min-width: 480px) {
-    .gradient {
-      background-position-x: 170px;
-    }
-  } */
 
   @media (min-width: 768px) {
     .gradient {
@@ -82,7 +71,7 @@
     }
 
     .decorations::after {
-      background-image: url('/svg/hero/wave-tablet-b.svg');
+      background-image: url('/images/hero/wave-tablet-b.svg');
       background-position: right bottom;
 
       mix-blend-mode: screen;
@@ -101,7 +90,7 @@
     }
 
     .decorations::after {
-      background-image: url('/svg/hero/wave-desktop-b.svg');
+      background-image: url('/images/hero/wave-desktop-b.svg');
       background-position: right -80px bottom;
     }
   }
