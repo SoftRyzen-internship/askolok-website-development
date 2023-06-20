@@ -91,7 +91,7 @@
 
     .decorations::after {
       background-image: url('/images/hero/wave-desktop-b.svg');
-      background-position: right calc(-150px + ((100vw - 1280px)/2)) bottom;
+      background-position: right calc(-180px + ((100vw - 1280px)/2)) bottom;
       background-attachment: local;
     }
   }
@@ -99,7 +99,7 @@
   @media (min-width: 1440px) {
     .decorations::after {
       background-image: url('/images/hero/wave-desktop-b.svg');
-      background-position: right -80px bottom;
+      background-position: right -90px bottom;
     }
   }
   /*Hero section  */
