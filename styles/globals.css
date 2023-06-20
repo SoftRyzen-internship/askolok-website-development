@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans text-base font-normal bg-whiteBg text-blackBg;
+    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
   }
 }
 
@@ -91,14 +91,22 @@
 
     .decorations::after {
       background-image: url('/images/hero/wave-desktop-b.svg');
+      background-position: right calc(-150px + ((100vw - 1280px)/2)) bottom;
+      background-attachment: local;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .decorations::after {
+      background-image: url('/images/hero/wave-desktop-b.svg');
       background-position: right -80px bottom;
     }
   }
   /*Hero section  */
 
   /* Advantages section */
-  .advantage-card{
-    @apply flex flex-col items-center rounded rounded-br-[60px] px-4 py-10 text-center shadow-primaryShadow md:w-[336px] md:px-10 xl:w-[384px]
+  .advantage-card {
+    @apply flex flex-col items-center rounded rounded-br-[60px] px-4 py-10 text-center shadow-primaryShadow md:w-[336px] md:px-10 xl:w-[384px];
   }
   /* Advantages section */
 
