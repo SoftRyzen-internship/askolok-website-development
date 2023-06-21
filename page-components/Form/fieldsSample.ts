@@ -24,11 +24,11 @@ export const fieldsParams: IFieldsParams = {
       message: 'Проверьте правильность ввода',
     },
     minLength: {
-      value: 9,
+      value: 10,
       message: 'минимальное кол-во цифр 9',
     },
     maxLength: {
-      value: 11,
+      value: 12,
       message: 'максимальное кол-во цифр 11',
     },
   },
