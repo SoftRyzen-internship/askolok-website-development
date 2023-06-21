@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Link, scroller } from 'react-scroll';
 import Image from 'next/image';
 
@@ -8,7 +9,9 @@ import LinkModal from '@/components/LinkModal/LinkModal';
 import Policy from '@/page-components/Policy/Policy';
 import PublicContract from '@/page-components/PublicContract/PublicContract';
 
-function Footer() {
+import { IFooterProps } from './Footer.props';
+
+const Footer: FC<IFooterProps> = ({ headerHeight }) => {
   const handleClick = (element: string) => {
     if (element) {
       scroller.scrollTo(element, {
@@ -48,7 +51,7 @@ function Footer() {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-114}
+                  offset={-headerHeight}
                   key={item.id}
                   className={`cursor-pointer py-2`}
                 >
@@ -100,6 +103,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

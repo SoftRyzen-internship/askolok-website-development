@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react';
-import { useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Link, scroller } from 'react-scroll';
 
 import navigation from './navigation';
@@ -11,7 +11,9 @@ import MenuIcon from '@/public/images/header/icon-menu.svg';
 
 import css from './Header.module.css';
 
-function Header() {
+import { IHeaderProps } from './Header.props';
+
+const Header: FC<IHeaderProps> = ({ HeaderRef, headerHeight }) => {
   const [headerBackground, setHeaderBackground] = useState(false);
 
   const handleScroll = () => {
@@ -42,6 +44,7 @@ function Header() {
       className={`fixed left-0 right-0 top-0 z-50 w-[100vw] transition-all duration-1000 ${
         headerBackground ? 'bg-whiteBg/90 ' : 'bg-transparent'
       }`}
+      ref={HeaderRef}
     >
       <div className="container">
         <Disclosure as="nav">
@@ -66,7 +69,7 @@ function Header() {
                             activeClass={css.active}
                             to={item.href}
                             spy={true}
-                            offset={-114}
+                            offset={-headerHeight}
                             smooth={true}
                             duration={500}
                             key={item.id}
@@ -139,13 +142,13 @@ function Header() {
                             key={item.name}
                             to={item.href}
                             tabIndex={0}
+                            spy={true}
+                            offset={-headerHeight}
+                            smooth={true}
+                            duration={500}
                             onClick={() => {
                               handleClick(item.href);
-                              if (open) {
-                                setTimeout(() => {
-                                  close();
-                                }, 0);
-                              }
+                              close();
                             }}
                             className="block cursor-pointer text-[20px] leading-[1.2] text-blackBg hover:underline hover:sm:underline-offset-4 md:text-[32px] hover:md:underline-offset-8"
                           >
@@ -163,6 +166,6 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
