@@ -4,7 +4,9 @@ import { IServiceCardProps } from './ServiceCard.props';
 
 const ServiceCard: FC<IServiceCardProps> = ({ service, price, className }) => {
   return (
-    <li className={`flex rounded border-[1px] border-[#ccc] md:h-[72px] xl:h-[76px] ${className}`}>
+    <li
+      className={`flex overflow-hidden rounded border-[1px] border-[#ccc] md:h-[72px] xl:h-[76px] ${className}`}
+    >
       <p className="flex w-4/5 items-center border-r-[1px] border-[#ccc] px-2 text-left text-sm text-black md:px-3 md:text-base xl:w-[85.47%] xl:px-6 xl:text-xl xl:text-blackBg smOnly:py-4 ">
         {service}
       </p>
