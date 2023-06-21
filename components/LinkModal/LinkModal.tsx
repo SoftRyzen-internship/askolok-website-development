@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import Modal from '../FixModal/Modal';
+import Modal from '../Modal/Modal';
 
 import { IModalsLinkProps } from './LinkModal.props';
 

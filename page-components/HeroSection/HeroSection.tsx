@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 
 import Button from '@/components/Button/Button';
 import Title from '@/components/typography/Title/Title';
-import Modal from '@/components/FixModal/Modal';
+import Modal from '@/components/Modal/Modal';
 import Form from '@/page-components/Form/Form';
 
 const HeroSection: FC = () => {
