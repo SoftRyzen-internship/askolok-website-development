@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Element } from 'react-scroll';
 
 import textJson from '@/public/materials/advantages.json';
 import { navigationSection } from '@/utils/navigationSection';
@@ -16,7 +15,7 @@ const AdvantagesSection: FC = () => {
   const [card1, card2, card3] = textJson.advantages;
 
   return (
-    <Element name={navigationSection.advantages}>
+    <div id={navigationSection.advantages}>
       <Sections className="bg-blueBg ">
         <div className="container">
           <Title tag="h2" className="text-center">
@@ -38,7 +37,7 @@ const AdvantagesSection: FC = () => {
           </ul>
         </div>
       </Sections>
-    </Element>
+    </div>
   );
 };
 

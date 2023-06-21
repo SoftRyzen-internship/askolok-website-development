@@ -33,9 +33,10 @@ const Modal: FC<IModalsProps> = ({ isOpen, setIsOpen, children, childrenName }) 
           <div className="fixed inset-0  flex items-center justify-center p-5 md:p-8">
             <Dialog.Panel
               className={cn(
-                'relative flex flex-col rounded-xl bg-white px-5 py-10 md:gap-2 md:px-8 md:py-[60px] ',
+                'relative flex flex-col rounded-xl bg-white px-5 py-10 md:gap-2 md:px-8 md:py-[60px]  ',
                 {
-                  ['w-full max-w-[444px]']: childrenName === 'Form',
+                  ['w-full max-w-[444px] smOnly:landscape:h-full smOnly:landscape:overflow-scroll']:
+                    childrenName === 'Form',
                   ['modal max-h-full w-full overflow-y-scroll scroll-smooth']:
                     childrenName === 'Policy' || childrenName === 'PublicContract',
                 }
