@@ -31,35 +31,37 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
 
         {/* Nav */}
         <div className="mt-6 flex justify-between sm:w-[430px] md:mt-0 md:w-auto md:content-start md:justify-end">
-          <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:mr-16 md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:mr-[170px] xl:grid-cols-1 xl:gap-5 xl:text-base">
-            {navigation.map(item => (
-              <li
-                className="w-[110px] flex-nowrap hover:font-semibold hover:underline md:w-[124px] xl:w-[141px]"
-                key={item.id}
-                onClick={() => {
-                  handleClick(item.href);
-                }}
-                onKeyUp={event => {
-                  if (event.key === 'Enter') {
-                    handleClick(item.href);
-                  }
-                }}
-              >
-                <Link
-                  tabIndex={0}
-                  to={item.href}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={-headerHeight}
+          <nav>
+            <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:mr-16 md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:mr-[170px] xl:grid-cols-1 xl:gap-5 xl:text-base">
+              {navigation.map(item => (
+                <li
+                  className="w-[110px] flex-nowrap hover:font-semibold hover:underline md:w-[124px] xl:w-[141px]"
                   key={item.id}
-                  className={`cursor-pointer py-2`}
+                  onClick={() => {
+                    handleClick(item.href);
+                  }}
+                  onKeyUp={event => {
+                    if (event.key === 'Enter') {
+                      handleClick(item.href);
+                    }
+                  }}
                 >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  <Link
+                    tabIndex={0}
+                    to={item.href}
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-headerHeight}
+                    key={item.id}
+                    className={`cursor-pointer py-2`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           {/* email image */}
           <div className="md:mb-10 xl:mb-[66px]">
