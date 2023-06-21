@@ -4,7 +4,7 @@ export const fieldsParams: IFieldsParams = {
   name: {
     required: 'обязательное поле',
     pattern: {
-      value: /^[\sа-яА-Яa-zA-ZёЁїІіЄєҐґ'-]{2,70}$/,
+      value: /^[\sа-яА-Яa-zA-ZёЁІі'-]{2,70}$/,
       message: 'Проверьте правильность ввода',
     },
     minLength: {

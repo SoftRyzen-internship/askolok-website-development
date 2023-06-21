@@ -6,7 +6,7 @@ import { navigationSection } from '@/utils/navigationSection';
 
 import Sections from '@/components/typography/Sections/Sections';
 import Button from '@/components/Button/Button';
-import Modal from '@/components/modal/Modal';
+import Modal from '@/components/FixModal/Modal';
 import Form from '../Form/Form';
 
 const RequestSection: FC = () => {
