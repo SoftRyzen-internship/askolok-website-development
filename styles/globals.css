@@ -6,6 +6,143 @@
 
 @layer base {
   body {
-    @apply bg-whiteBg font-sans text-blackBg text-base font-normal;
+    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
   }
+}
+
+@layer components {
+  /*Hero section  */
+  .decorations {
+    position: relative;
+  }
+
+  .decorations::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1;
+
+    background-image: url('/images/hero/mac-mobile@1x.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 120px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/images/hero/mac-mobile@2x.png');
+      background-size: 165px 138px;
+    }
+  }
+
+  .decorations::after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-image: url('/images/hero/wave-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    background-color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .gradient {
+      background-image: linear-gradient(130deg, #1729b2, #4475eb);
+      background-repeat: no-repeat;
+      background-position-x: 50vw;
+    }
+
+    .decorations::before {
+      background-image: url('/images/hero/mac-tablet@1x.png');
+      background-position: right -40px bottom 60px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/images/hero/mac-tablet@2x.png');
+        background-size: 427px 354px;
+      }
+    }
+
+    .decorations::after {
+      background-image: url('/images/hero/wave-tablet-b.svg');
+      background-position: right bottom;
+
+      mix-blend-mode: screen;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .decorations::before {
+      background-image: url('/images/hero/mac-desktop@1x.png');
+      background-position: right 13px bottom 80px;
+
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/images/hero/mac-desktop@2x.png');
+        background-size: 724px 600px;
+      }
+    }
+
+    .decorations::after {
+      background-image: url('/images/hero/wave-desktop-b.svg');
+      background-position: right calc(-180px + ((100vw - 1280px)/2)) bottom;
+      background-attachment: local;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .decorations::after {
+      background-image: url('/images/hero/wave-desktop-b.svg');
+      background-position: right -90px bottom;
+    }
+  }
+  /*Hero section  */
+
+  /* Advantages section */
+  .advantage-card {
+    @apply flex flex-col items-center rounded rounded-br-[60px] px-4 py-10 text-center shadow-primaryShadow md:w-[336px] md:px-10 xl:w-[384px];
+  }
+  /* Advantages section */
+
+  /*Scrollbar Modal  */
+  .modal::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  .modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    margin-top: 156px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+  }
+
+  /* Handle */
+  .modal::-webkit-scrollbar-thumb {
+    background-color: rgba(37, 37, 37, 0.4);
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  .modal::-webkit-scrollbar-thumb:hover {
+    background-color: #1729b2;
+  }
+  @media (min-width: 768px) {
+    .modal::-webkit-scrollbar {
+      width: 16px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .modal::-webkit-scrollbar {
+      width: 24px;
+    }
+  }
+  /*Scrollbar Modal */
 }
