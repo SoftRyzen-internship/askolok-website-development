@@ -48,6 +48,7 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
                 >
                   <Link
                     tabIndex={0}
+                    href=''
                     to={item.href}
                     spy={true}
                     smooth={true}

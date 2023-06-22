@@ -68,6 +68,7 @@ const Header: FC<IHeaderProps> = ({ HeaderRef, headerHeight }) => {
                             tabIndex={0}
                             activeClass={css.active}
                             to={item.href}
+                            href=""
                             spy={true}
                             offset={-headerHeight}
                             smooth={true}
@@ -141,6 +142,7 @@ const Header: FC<IHeaderProps> = ({ HeaderRef, headerHeight }) => {
                           <Link
                             key={item.name}
                             to={item.href}
+                            href=""
                             tabIndex={0}
                             spy={true}
                             offset={-headerHeight}
