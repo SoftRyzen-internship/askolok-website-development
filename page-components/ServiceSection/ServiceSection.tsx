@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { Element } from 'react-scroll';
 
 import textJson from '@/public/materials/services.json';
 import { navigationSection } from '@/utils/navigationSection';
@@ -13,7 +12,7 @@ const ServiceSection: FC = () => {
   const { services } = textJson;
 
   return (
-    <Element name={navigationSection.service}>
+    <div id={navigationSection.service}>
       <Sections>
         <div className="container text-center">
           <Title tag="h2">Услуги и цены</Title>
@@ -32,7 +31,7 @@ const ServiceSection: FC = () => {
           </Link>
         </div>
       </Sections>
-    </Element>
+    </div>
   );
 };
 

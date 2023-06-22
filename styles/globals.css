@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply bg-whiteBg font-sans text-base font-normal text-blackBg;
+    @apply font-sans text-base font-normal bg-whiteBg text-blackBg;
   }
 }
 
@@ -30,8 +30,10 @@
     background-image: url('/images/hero/mac-mobile@1x.png');
     background-repeat: no-repeat;
     background-position: center bottom 120px;
+  }
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .decorations::before {
       background-image: url('/images/hero/mac-mobile@2x.png');
       background-size: 165px 138px;
     }
@@ -63,8 +65,10 @@
     .decorations::before {
       background-image: url('/images/hero/mac-tablet@1x.png');
       background-position: right -40px bottom 60px;
+    }
 
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .decorations::before {
         background-image: url('/images/hero/mac-tablet@2x.png');
         background-size: 427px 354px;
       }
@@ -81,9 +85,11 @@
   @media (min-width: 1280px) {
     .decorations::before {
       background-image: url('/images/hero/mac-desktop@1x.png');
-      background-position: right 13px bottom 80px;
+      background-position: right calc(-67px + (100vw - 1280px) / 2) bottom 80px;
+    }
 
-      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .decorations::before {
         background-image: url('/images/hero/mac-desktop@2x.png');
         background-size: 724px 600px;
       }
@@ -91,15 +97,19 @@
 
     .decorations::after {
       background-image: url('/images/hero/wave-desktop-b.svg');
-      background-position: right calc(-180px + ((100vw - 1280px)/2)) bottom;
+      background-position: right calc(-180px + ((100vw - 1280px) / 2)) bottom;
       background-attachment: local;
     }
   }
 
   @media (min-width: 1440px) {
+    .decorations::before {
+      background-position: right 13px bottom 80px;
+    }
+
     .decorations::after {
       background-image: url('/images/hero/wave-desktop-b.svg');
-      background-position: right -90px bottom;
+      background-position: right -100px bottom;
     }
   }
   /*Hero section  */
