@@ -20,7 +20,7 @@ export const fieldsParams: IFieldsParams = {
   phone: {
     required: 'обязательное поле',
     pattern: {
-      value: /^\+\d{9,11}$/,
+      value: /^\+\d{9,12}$/,
       message: 'Проверьте правильность ввода',
     },
     minLength: {
@@ -28,8 +28,8 @@ export const fieldsParams: IFieldsParams = {
       message: 'минимальное кол-во цифр 9',
     },
     maxLength: {
-      value: 12,
-      message: 'максимальное кол-во цифр 11',
+      value: 13,
+      message: 'максимальное кол-во цифр 12',
     },
   },
 
