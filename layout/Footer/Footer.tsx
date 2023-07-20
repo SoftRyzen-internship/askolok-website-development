@@ -67,7 +67,7 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
           {/* email image */}
           <div className="md:mb-10 xl:mb-[66px]">
             <div className="flex flex-col">
-              <p className="text-xs md:text-sm xl:text-base">askolok@gmail.com</p>
+              <p className="text-xs md:text-sm xl:text-base">nasya100@gmail.com</p>
             </div>
 
             <div
