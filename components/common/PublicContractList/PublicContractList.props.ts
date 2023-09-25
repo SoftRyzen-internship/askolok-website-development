@@ -1,5 +1,7 @@
 export interface IPublicContractItem {
   text: string;
+  subtext?: string[];
+  aftertext?: string;
 }
 
 export interface IPublicContractSection {
