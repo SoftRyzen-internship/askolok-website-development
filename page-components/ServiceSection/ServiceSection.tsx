@@ -1,5 +1,4 @@
 import { FC } from 'react';
-// import Link from 'next/link';
 import Image from 'next/image';
 
 import textJson from '@/public/materials/services.json';
@@ -22,14 +21,6 @@ const ServiceSection: FC = () => {
               <ServiceCard key={service} service={service} price={price} />
             ))}
           </ul>
-          {/* <Link
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="relative z-[1] mt-6 inline-block min-w-[280px] rounded bg-blackBg px-5 py-[14px] text-lg font-bold text-white before:absolute before:inset-0 before:z-[-1] before:rounded before:bg-gradient-to-br before:from-blueDark before:to-blueLight before:opacity-0 before:transition-opacity before:duration-300 before:content-[''] hover:before:opacity-100 focus:before:opacity-100 md:mt-10"
-          >
-            Оплатить
-          </Link> */}
         </div>
         <div className="absolute bottom-0 w-full pb-2">
           <Image

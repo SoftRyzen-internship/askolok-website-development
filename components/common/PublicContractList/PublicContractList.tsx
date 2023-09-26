@@ -12,6 +12,16 @@ const PublicContractList: FC<IPublicContractProps> = ({ sections }) => {
             {section.subtitle.map((item, index) => (
               <li key={index}>
                 <p>{item.text}</p>
+                {item.subtext && 
+                  <ul className='ml-2 list-disc list-inside'>
+                    {item.subtext.map((subtext, index) => 
+                      <li key={index}>{subtext}</li>
+                    )}
+                  </ul>
+                }
+                {item.aftertext && 
+                  <p>{item.aftertext}</p>
+                }
               </li>
             ))}
           </ul>
