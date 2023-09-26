@@ -25,9 +25,9 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
     <footer className="relative bg-blackBg pt-[40px] text-whiteBg xl:pt-[60px]">
       <div className="container relative flex flex-col md:flex md:flex-row">
         {/* logo and schedule */}
-        <div className="flex items-center justify-center gap-6 md:mr-[31px] md:flex-col md:content-start md:items-start md:justify-start xl:mr-[180px] xl:gap-10 ">
+        <div className="flex items-center justify-center gap-6 sm:justify-between md:mr-[84px] md:flex-col md:content-start md:items-start md:justify-start md:gap-5 xl:mr-[180px] xl:gap-10 ">
           <CompanyLogo footer />
-          <span className="text-xs md:text-sm xl:text-base">
+          <span className="text-xs sm:w-[200px] md:w-auto md:text-sm xl:text-base">
             Режим работы: <br /> ПН-СБ 09:00-18:00
           </span>
         </div>
@@ -35,7 +35,7 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
         {/* Nav */}
         <div className="mt-6 flex justify-between sm:w-[430px] md:mt-0 md:w-auto md:content-start md:justify-end">
           <nav>
-            <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:mr-16 md:grid md:grid-cols-2 md:content-start md:gap-x-[67px] md:gap-y-4 md:text-sm xl:mr-[170px] xl:grid-cols-1 xl:gap-5 xl:text-base">
+            <ul className="flex flex-col flex-nowrap gap-x-6 gap-y-6 text-xs md:content-start md:gap-x-[67px] md:gap-y-2 md:text-sm xl:mr-[170px] xl:grid-cols-1 xl:gap-5 xl:text-base">
               {navigation.map(item => (
                 <li
                   className="w-[110px] flex-nowrap hover:font-semibold hover:underline md:w-[124px] xl:w-[141px]"
@@ -83,7 +83,7 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
         </ul>
 
         {/* owner's info */}
-        <div className="flex flex-col pb-2 xl:ml-auto">
+        <div className="flex flex-col pb-2 sm:absolute sm:right-5 sm:top-[62px] sm:max-w-[200px] md:static md:ml-auto md:max-w-max">
           <p className="text-[10px] leading-4 md:text-[10px] md:leading-5 xl:text-base">
             {ownerData.authNumber}
           </p>
