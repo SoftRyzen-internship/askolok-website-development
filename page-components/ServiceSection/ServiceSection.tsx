@@ -16,19 +16,17 @@ const ServiceSection: FC = () => {
       <Sections className="relative pb-16 md:pb-20 xl:pb-[108px]">
         <div className="container text-center">
           <Title tag="h2">Услуги и цены</Title>
-          <ul className="mt-6 flex flex-col gap-2 md:mt-10 md:gap-3 xl:mt-[60px] xl:gap-5">
+          <ul className="my-6  flex flex-col gap-2 md:my-10 md:gap-3 xl:my-[60px] xl:gap-5">
             {services.map(({ service, price }) => (
               <ServiceCard key={service} service={service} price={price} />
             ))}
           </ul>
-        </div>
-        <div className="absolute bottom-0 w-full pb-2">
           <Image
             src="/images/footer/payLogos.png"
             alt="веб-платежи"
             width={1280}
             height={40}
-            className="container mx-auto h-auto w-full"
+            className="mx-auto h-auto w-full "
           />
         </div>
       </Sections>
