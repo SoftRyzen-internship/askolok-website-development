@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { Link, scroller } from 'react-scroll';
-import Image from 'next/image';
 
 import navigation from './navigation';
+import ownerData from './ownerData';
 
 import CompanyLogo from '@/components/Logo/Logo';
 import LinkModal from '@/components/LinkModal/LinkModal';
@@ -22,11 +22,14 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
   };
 
   return (
-    <footer className="bg-blackBg pt-[40px] text-whiteBg xl:pt-[60px]">
-      <div className="xl:item-center container relative flex flex-col md:flex md:flex-row">
-        {/* logo */}
-        <div className="flex items-center justify-center md:mr-[31px] md:content-start md:items-start xl:mr-[180px] ">
+    <footer className="relative bg-blackBg pt-[40px] text-whiteBg xl:pt-[60px]">
+      <div className="container relative flex flex-col md:flex md:flex-row">
+        {/* logo and schedule */}
+        <div className="flex items-center justify-center gap-6 md:mr-[31px] md:flex-col md:content-start md:items-start md:justify-start xl:mr-[180px] xl:gap-10 ">
           <CompanyLogo footer />
+          <span className="text-xs md:text-sm xl:text-base">
+            Режим работы: <br /> ПН-СБ 09:00-18:00
+          </span>
         </div>
 
         {/* Nav */}
@@ -48,7 +51,7 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
                 >
                   <Link
                     tabIndex={0}
-                    href=''
+                    href=""
                     to={item.href}
                     spy={true}
                     smooth={true}
@@ -63,29 +66,10 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
               ))}
             </ul>
           </nav>
-
-          {/* email image */}
-          <div className="md:mb-10 xl:mb-[66px]">
-            <div className="flex flex-col">
-              <p className="text-xs md:text-sm xl:text-base">nasya100@gmail.com</p>
-            </div>
-
-            <div
-              className={`relative mt-6 h-[72px] w-[132px] md:mt-4 md:h-[82px] md:w-[152px] xl:mt-8 xl:h-[96px] xl:w-[176px]`}
-            >
-              <Image
-                src="/images/footer/imagePay.jpg"
-                alt="веб-платежи"
-                className="rounded"
-                fill={true}
-                sizes="30vw"
-              />
-            </div>
-          </div>
         </div>
 
         {/* policy contract */}
-        <ul className="mr-auto mt-6 flex flex-col items-start gap-5 md:absolute md:bottom-10 md:flex-row-reverse md:gap-[80px] xl:static xl:ml-auto xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
+        <ul className="my-6 mr-auto flex flex-col items-start gap-5 md:absolute md:bottom-0 md:my-2 md:flex-row-reverse md:gap-[80px] xl:static xl:mr-0 xl:mt-0 xl:flex-col xl:gap-[20px]">
           <li>
             <LinkModal childrenName="Policy" text="Политика конфиденциальности">
               <Policy />
@@ -97,9 +81,37 @@ const Footer: FC<IFooterProps> = ({ headerHeight }) => {
             </LinkModal>
           </li>
         </ul>
+
+        {/* owner's info */}
+        <div className="flex flex-col pb-2 xl:ml-auto">
+          <p className="text-[10px] leading-4 md:text-[10px] md:leading-5 xl:text-base">
+            {ownerData.authNumber}
+          </p>
+          <p className="text-[10px] leading-4 md:max-w-[260px] md:text-[10px] md:leading-5 xl:text-base">
+            {ownerData.authAddress}
+          </p>
+          <p className="text-[10px] leading-4 md:text-[10px] md:leading-5 xl:text-base">
+            {ownerData.name}
+          </p>
+          <p className="text-[10px] leading-4 md:max-w-[260px] md:text-[10px] md:leading-5 xl:text-base">
+            {ownerData.address}
+          </p>
+          <a
+            href="mailto:nasya100@gmail.com"
+            className="text-[10px] leading-4 md:text-[10px] md:leading-5 xl:text-base"
+          >
+            {ownerData.email}
+          </a>
+          <a
+            href="tel:+375292597366"
+            className="text-[10px] leading-4 md:text-[10px] md:leading-5 xl:text-base"
+          >
+            {ownerData.phone}
+          </a>
+        </div>
       </div>
 
-      <div className="mt-10 border-t border-t-[#3D3D3D] py-3 md:mt-0 md:py-5">
+      <div className="border-t border-t-[#3D3D3D] py-3 md:mt-0 md:py-5">
         <p className="mx-auto w-[141px] text-center text-[10px] leading-[1.2] text-[#CECECE] md:w-auto md:text-[12px] md:leading-[1.33] xl:leading-[1.17]">
           Анастасия Асколок © 2023 Все права защищены
         </p>
